@@ -154,7 +154,4 @@
         </div>
     </form>
 </div>
-
-</body>
-</html>
 @endsection

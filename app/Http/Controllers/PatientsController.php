@@ -31,6 +31,11 @@ class PatientsController extends Controller
         if($request->birth_date) $obj->birth_date = $request->birth_date;
         $obj->save();
         $patient_id = $obj->id;
+        for($i = 0; $i < 32; $i++){
+            $tooth = new Patient_Tooth();
+            $tooth->patient_id = $patient_id;
+            $tooth->save();
+        }
 
         if($request->t_18_1) $this->saveToothInfo('18_1', $request->t_18_1, $patient_id);
 
@@ -38,7 +43,7 @@ class PatientsController extends Controller
     }
 
     public function saveToothInfo($tooth, $value, $patient_id){
-        $patient_tooth = new Patient_Tooth();
-        $patient_tooth->patient_id = $patient_id;
+//        $patient_tooth = Patient_Tooth::where([['patient_id',$patient_id],['tooth_id']])
+//        $patient_tooth->patient_id = $patient_id;
     }
 }

@@ -1,27 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Laravel</title>
-        <link rel="stylesheet" type="text/css" href={{ asset("bootstrap/css/bootstrap.min.css") }}>
-        <link rel="stylesheet" type="text/css" href={{ asset("jquery/jquery-ui.min.css") }}>
-        <link rel="stylesheet" type="text/css" href={{ asset("css/style.css") }}>
-    </head>
-    <body>
-        <div class="container">
+@extends('layout')
+@section('content')
+  <div class="container">
             <h1 class="mt-4 mb-5 date-h1">{{ $date }}</h1>
             <div class="form-group text-right">
                 <label for="datepicker"><img src={{ asset("pics/calendar-icon.png") }} class="icon-date"></label>
                <p><input type="text" id="datepicker" class="date-input"></p>
             </div>
         <table class="table table-sm table-striped table-hover notes-table">
-  <tbody>
+  <tbody class="notes-table">
     <tr>
-      <th scope="row" class="col-1">09:00</th>
-      <td class="col-10"><input type="text" name="" class="border-0 w-100 px-3" value="{{$notes->t_09_00}}"></td>  
+      <th class="col-1">09:00</th>
+      <td class="col-7"><input type="text" name="" class="border-0 w-100 px-3" value="{{$notes->t_09_00}}"></td>
     </tr>
     <tr>
       <th scope="row">09:30</th>
@@ -130,11 +119,4 @@
   </tbody>
 </table>
 </div>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script type="text/javascript" src={{ asset("jquery/jquery-ui.min.js") }}></script>
-<script type="text/javascript" src={{ asset("js/script.js") }}></script>
-</body>
-</html>
+@endsection
