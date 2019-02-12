@@ -1,0 +1,20 @@
+.menu-item{
+    margin-left: 20px;
+    font-size: 18px;
+}
+.edit-button{
+    float: right;
+}
+.table-cont td input{
+    display: block;
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+}
+.table-cont td input:focus{
+    outline: none;
+}
+.table-cont td{
+    padding: 4px;
+    width: 20px;
+}

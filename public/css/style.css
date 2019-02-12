@@ -1,0 +1,19 @@
+.icon-date{
+	width: 50px;
+	float: right;
+}
+.date-input{
+	width:0;
+	height: 0;
+	border: none;
+}
+
+.ui-datepicker-header {
+    background-color: #e86d6d;
+}
+
+.ui-datepicker-today a.ui-state-highlight{
+    border-color: #b51919;
+    color: #b51919;   
+    background: white; 
+}
