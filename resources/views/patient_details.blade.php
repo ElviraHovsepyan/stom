@@ -1,9 +1,9 @@
 @extends('layout')
 @section('content')
-<div class="container">
+<div class="container table-cont">
     <h2 class="mb-5 mt-5 text-center">Details</h2>
-    <form autocomplete="off">
-
+        <form autocomplete="off" method="post" action="{{ route('edit_patient') }}">
+            {{ csrf_field() }}
         <table class="table table-bordered">
             <tr>
                 <td><input type="text" name="t_18_2" class="border-0 p-0"></td>
@@ -80,66 +80,68 @@
             </tr>
             </tr>
             <tr>
-                <td><input type="text" name="t_48-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_47-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_46-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_45-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_44-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_43-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_42-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_41-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_31-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_32-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_33-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_34-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_35-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_36-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_37-1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_38-1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_48_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_47_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_46_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_45_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_44_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_43_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_42_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_41_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_31_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_32_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_33_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_34_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_35_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_36_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_37_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_38_1" class="border-0 p-0"></td>
             </tr>
             </tr>
             <tr>
-                <td><input type="text" name="t_48-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_47-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_46-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_45-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_44-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_43-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_42-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_41-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_31-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_32-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_33-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_34-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_35-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_36-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_37-2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_38-2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_48_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_47_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_46_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_45_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_44_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_43_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_42_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_41_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_31_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_32_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_33_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_34_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_35_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_36_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_37_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_38_2" class="border-0 p-0"></td>
             </tr>
         </table>
-
+        <input type="hidden" name="id" value="{{ $patient->id }}">
         <div class="form-group row">
             <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="First Name" autocomplete="off" value="{{ $patient->first_name }}">
+                <input type="text" name="first_name" class="form-control" placeholder="First Name" autocomplete="off" value="{{ $patient->first_name }}">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Last Name" value="{{ $patient->last_name }}">
+                <input type="text" name="last_name" class="form-control" placeholder="Last Name" value="{{ $patient->last_name }}">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Address" value="{{ $patient->address }}">
+                <input type="text" name="address" class="form-control" placeholder="Address" value="{{ $patient->address }}">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Telephone" value="{{ $patient->telephone }}">
+                <input type="text" name="telephone" class="form-control" placeholder="Telephone" value="{{ $patient->telephone }}">
             </div>
         </div>
         <div class="form-group row">
-
+            <div class="col-md-12">
+                <input type="text" class="form-control" placeholder="Birth Date" autocomplete="off" name="birth_date" value="{{ $patient->birth_date }}">
+            </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12">

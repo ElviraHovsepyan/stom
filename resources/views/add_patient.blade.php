@@ -145,9 +145,6 @@
             </div>
         </div>
         <div class="form-group row">
-
-        </div>
-        <div class="form-group row">
             <div class="col-md-12">
                 <button type="submit" class="btn btn-outline-success edit-button">Add</button>
             </div>

@@ -14,7 +14,8 @@ class PatientsController extends Controller
     }
 
     public function patientsDetails($id){
-        $patient = Patient::find($id);
+        $patient = Patient::with('patient_tooth')->where('id',$id)->first();
+        dd($patient['patient_tooth'][0]['value_1']);
         return view('patient_details',['patient'=>$patient]);
     }
 
@@ -37,7 +38,11 @@ class PatientsController extends Controller
             $tooth->tooth_id = $i+1;
             $tooth->save();
         }
+        $this->checkTooth($request,$patient_id);
+        return redirect()->route('patients');
+    }
 
+    public function checkTooth($request,$patient_id){
         if($request->t_18_1) $this->saveToothInfo($patient_id,18,1, $request->t_18_1);
         if($request->t_17_1) $this->saveToothInfo($patient_id,17,1, $request->t_17_1);
         if($request->t_16_1) $this->saveToothInfo($patient_id,16,1, $request->t_16_1);
@@ -105,8 +110,6 @@ class PatientsController extends Controller
         if($request->t_36_2) $this->saveToothInfo($patient_id,36,2, $request->t_36_2);
         if($request->t_37_2) $this->saveToothInfo($patient_id,37,2, $request->t_37_2);
         if($request->t_38_2) $this->saveToothInfo($patient_id,38,2, $request->t_38_2);
-
-        return redirect()->route('patients');
     }
 
     public function saveToothInfo($patient_id, $tooth, $num, $value){
@@ -115,7 +118,22 @@ class PatientsController extends Controller
                                 ->whereHas('teeth',function ($query) use ($tooth){
                                     $query->where('tooth',$tooth);
                                 })->first();
-        $patient_tooth->value_.$num = $value;
+        $val = 'value_'.$num;
+        $patient_tooth->$val = $value;
         $patient_tooth->save();
+    }
+
+    public function edit(Request $request){
+        $id = $request->id;
+        $obj = Patient::find($id);
+        if($request->first_name) $obj->first_name = $request->first_name;
+        if($request->last_name) $obj->last_name = $request->last_name;
+        if($request->address) $obj->address = $request->address;
+        if($request->telephone) $obj->telephone = $request->telephone;
+        if($request->birth_date) $obj->birth_date = $request->birth_date;
+        $obj->save();
+        $patient_id = $obj->id;
+        $this->checkTooth($request,$patient_id);
+        return redirect()->route('patient_details',['id'=>$patient_id]);
     }
 }
