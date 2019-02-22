@@ -6,40 +6,40 @@
             {{ csrf_field() }}
         <table class="table table-bordered">
             <tr>
-                <td><input type="text" name="t_18_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_17_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_16_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_15_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_14_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_13_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_12_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_11_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_21_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_22_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_23_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_24_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_25_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_26_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_27_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_28_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_18_2" value="{{ $patient['patient_tooth'][0]['value_2'] }}"></td>
+                <td><input type="text" name="t_17_2" value="{{ $patient['patient_tooth'][1]['value_2'] }}"></td>
+                <td><input type="text" name="t_16_2" value="{{ $patient['patient_tooth'][2]['value_2'] }}"></td>
+                <td><input type="text" name="t_15_2" value="{{ $patient['patient_tooth'][3]['value_2'] }}"></td>
+                <td><input type="text" name="t_14_2" value="{{ $patient['patient_tooth'][4]['value_2'] }}"></td>
+                <td><input type="text" name="t_13_2" value="{{ $patient['patient_tooth'][5]['value_2'] }}"></td>
+                <td><input type="text" name="t_12_2" value="{{ $patient['patient_tooth'][6]['value_2'] }}"></td>
+                <td><input type="text" name="t_11_2" value="{{ $patient['patient_tooth'][7]['value_2'] }}"></td>
+                <td><input type="text" name="t_21_2" value="{{ $patient['patient_tooth'][8]['value_2'] }}"></td>
+                <td><input type="text" name="t_22_2" value="{{ $patient['patient_tooth'][9]['value_2'] }}"></td>
+                <td><input type="text" name="t_23_2" value="{{ $patient['patient_tooth'][10]['value_2'] }}"></td>
+                <td><input type="text" name="t_24_2" value="{{ $patient['patient_tooth'][11]['value_2'] }}"></td>
+                <td><input type="text" name="t_25_2" value="{{ $patient['patient_tooth'][12]['value_2'] }}"></td>
+                <td><input type="text" name="t_26_2" value="{{ $patient['patient_tooth'][13]['value_2'] }}"></td>
+                <td><input type="text" name="t_27_2" value="{{ $patient['patient_tooth'][14]['value_2'] }}"></td>
+                <td><input type="text" name="t_28_2" value="{{ $patient['patient_tooth'][15]['value_2'] }}"></td>
             </tr>
             <tr>
-                <td><input type="text" name="t_18_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_17_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_16_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_15_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_14_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_13_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_12_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_11_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_21_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_22_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_23_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_24_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_25_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_26_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_27_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_28_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_18_1" value="{{ $patient['patient_tooth'][0]['value_1'] }}"></td>
+                <td><input type="text" name="t_17_1" value="{{ $patient['patient_tooth'][1]['value_1'] }}"></td>
+                <td><input type="text" name="t_16_1" value="{{ $patient['patient_tooth'][2]['value_1'] }}"></td>
+                <td><input type="text" name="t_15_1" value="{{ $patient['patient_tooth'][3]['value_1'] }}"></td>
+                <td><input type="text" name="t_14_1" value="{{ $patient['patient_tooth'][4]['value_1'] }}"></td>
+                <td><input type="text" name="t_13_1" value="{{ $patient['patient_tooth'][5]['value_1'] }}"></td>
+                <td><input type="text" name="t_12_1" value="{{ $patient['patient_tooth'][6]['value_1'] }}"></td>
+                <td><input type="text" name="t_11_1" value="{{ $patient['patient_tooth'][7]['value_1'] }}"></td>
+                <td><input type="text" name="t_21_1" value="{{ $patient['patient_tooth'][8]['value_1'] }}"></td>
+                <td><input type="text" name="t_22_1" value="{{ $patient['patient_tooth'][9]['value_1'] }}"></td>
+                <td><input type="text" name="t_23_1" value="{{ $patient['patient_tooth'][10]['value_1'] }}"></td>
+                <td><input type="text" name="t_24_1" value="{{ $patient['patient_tooth'][11]['value_1'] }}"></td>
+                <td><input type="text" name="t_25_1" value="{{ $patient['patient_tooth'][12]['value_1'] }}"></td>
+                <td><input type="text" name="t_26_1" value="{{ $patient['patient_tooth'][13]['value_1'] }}"></td>
+                <td><input type="text" name="t_27_1" value="{{ $patient['patient_tooth'][14]['value_1'] }}"></td>
+                <td><input type="text" name="t_28_1" value="{{ $patient['patient_tooth'][15]['value_1'] }}"></td>
             </tr>
             <tr>
                 <td>18</td>
@@ -80,41 +80,41 @@
             </tr>
             </tr>
             <tr>
-                <td><input type="text" name="t_48_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_47_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_46_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_45_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_44_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_43_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_42_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_41_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_31_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_32_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_33_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_34_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_35_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_36_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_37_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_38_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_48_1" value="{{ $patient['patient_tooth'][16]['value_1'] }}"></td>
+                <td><input type="text" name="t_47_1" value="{{ $patient['patient_tooth'][17]['value_1'] }}"></td>
+                <td><input type="text" name="t_46_1" value="{{ $patient['patient_tooth'][18]['value_1'] }}"></td>
+                <td><input type="text" name="t_45_1" value="{{ $patient['patient_tooth'][19]['value_1'] }}"></td>
+                <td><input type="text" name="t_44_1" value="{{ $patient['patient_tooth'][20]['value_1'] }}"></td>
+                <td><input type="text" name="t_43_1" value="{{ $patient['patient_tooth'][21]['value_1'] }}"></td>
+                <td><input type="text" name="t_42_1" value="{{ $patient['patient_tooth'][22]['value_1'] }}"></td>
+                <td><input type="text" name="t_41_1" value="{{ $patient['patient_tooth'][23]['value_1'] }}"></td>
+                <td><input type="text" name="t_31_1" value="{{ $patient['patient_tooth'][24]['value_1'] }}"></td>
+                <td><input type="text" name="t_32_1" value="{{ $patient['patient_tooth'][25]['value_1'] }}"></td>
+                <td><input type="text" name="t_33_1" value="{{ $patient['patient_tooth'][26]['value_1'] }}"></td>
+                <td><input type="text" name="t_34_1" value="{{ $patient['patient_tooth'][27]['value_1'] }}"></td>
+                <td><input type="text" name="t_35_1" value="{{ $patient['patient_tooth'][28]['value_1'] }}"></td>
+                <td><input type="text" name="t_36_1" value="{{ $patient['patient_tooth'][29]['value_1'] }}"></td>
+                <td><input type="text" name="t_37_1" value="{{ $patient['patient_tooth'][30]['value_1'] }}"></td>
+                <td><input type="text" name="t_38_1" value="{{ $patient['patient_tooth'][31]['value_1'] }}"></td>
             </tr>
             </tr>
             <tr>
-                <td><input type="text" name="t_48_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_47_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_46_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_45_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_44_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_43_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_42_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_41_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_31_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_32_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_33_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_34_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_35_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_36_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_37_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_38_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_48_2" value="{{ $patient['patient_tooth'][16]['value_2'] }}"></td>
+                <td><input type="text" name="t_47_2" value="{{ $patient['patient_tooth'][17]['value_2'] }}"></td>
+                <td><input type="text" name="t_46_2" value="{{ $patient['patient_tooth'][18]['value_2'] }}"></td>
+                <td><input type="text" name="t_45_2" value="{{ $patient['patient_tooth'][19]['value_2'] }}"></td>
+                <td><input type="text" name="t_44_2" value="{{ $patient['patient_tooth'][20]['value_2'] }}"></td>
+                <td><input type="text" name="t_43_2" value="{{ $patient['patient_tooth'][21]['value_2'] }}"></td>
+                <td><input type="text" name="t_42_2" value="{{ $patient['patient_tooth'][22]['value_2'] }}"></td>
+                <td><input type="text" name="t_41_2" value="{{ $patient['patient_tooth'][23]['value_2'] }}"></td>
+                <td><input type="text" name="t_31_2" value="{{ $patient['patient_tooth'][24]['value_2'] }}"></td>
+                <td><input type="text" name="t_32_2" value="{{ $patient['patient_tooth'][25]['value_2'] }}"></td>
+                <td><input type="text" name="t_33_2" value="{{ $patient['patient_tooth'][26]['value_2'] }}"></td>
+                <td><input type="text" name="t_34_2" value="{{ $patient['patient_tooth'][27]['value_2'] }}"></td>
+                <td><input type="text" name="t_35_2" value="{{ $patient['patient_tooth'][28]['value_2'] }}"></td>
+                <td><input type="text" name="t_36_2" value="{{ $patient['patient_tooth'][29]['value_2'] }}"></td>
+                <td><input type="text" name="t_37_2" value="{{ $patient['patient_tooth'][30]['value_2'] }}"></td>
+                <td><input type="text" name="t_38_2" value="{{ $patient['patient_tooth'][31]['value_2'] }}"></td>
             </tr>
         </table>
         <input type="hidden" name="id" value="{{ $patient->id }}">
@@ -185,5 +185,8 @@
         </tr>
         </tbody>
     </table>
+    <div class="row">
+        <p>Paging</p>
+    </div>
 </div>
 @endsection

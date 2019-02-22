@@ -15,7 +15,6 @@ class PatientsController extends Controller
 
     public function patientsDetails($id){
         $patient = Patient::with('patient_tooth')->where('id',$id)->first();
-        dd($patient['patient_tooth'][0]['value_1']);
         return view('patient_details',['patient'=>$patient]);
     }
 
@@ -43,6 +42,7 @@ class PatientsController extends Controller
     }
 
     public function checkTooth($request,$patient_id){
+//        dd($request->t_18_1);
         if($request->t_18_1) $this->saveToothInfo($patient_id,18,1, $request->t_18_1);
         if($request->t_17_1) $this->saveToothInfo($patient_id,17,1, $request->t_17_1);
         if($request->t_16_1) $this->saveToothInfo($patient_id,16,1, $request->t_16_1);
@@ -135,5 +135,11 @@ class PatientsController extends Controller
         $patient_id = $obj->id;
         $this->checkTooth($request,$patient_id);
         return redirect()->route('patient_details',['id'=>$patient_id]);
+    }
+
+    public function deletePatient($id){
+        $patient = Patient::find($id);
+        $patient->delete();
+        return redirect()->route('patients');
     }
 }

@@ -14,17 +14,15 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($patients as $patient)
-            <tr>
-
-                <th scope="row">1</th>
-                <td>{{ $patient->first_name }}</td>
-                <td>{{ $patient->last_name }}</td>
-                <td>{{ $patient->telephone }}</td>
-                <td><a href="{{ route('patient_details',$patient->id) }}">View</a></td>
-                <td>{{ $patient->id }}Delete</td>
-
-            </tr>
+            @foreach($patients as $i=>$patient)
+                <tr>
+                    <th scope="row">{{ $i+1 }}</th>
+                    <td>{{ $patient->first_name }}</td>
+                    <td>{{ $patient->last_name }}</td>
+                    <td>{{ $patient->telephone }}</td>
+                    <td><a href="{{ route('patient_details',$patient->id) }}">View</a></td>
+                    <td><a href="{{ route('delete_patient',$patient->id) }}">Delete</a></td>
+                </tr>
             @endforeach
             </tbody>
         </table>

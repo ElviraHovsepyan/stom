@@ -7,40 +7,40 @@
             {{ csrf_field() }}
         <table class="table table-bordered">
             <tr>
-                <td><input type="text" name="t_18_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_17_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_16_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_15_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_14_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_13_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_12_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_11_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_21_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_22_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_23_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_24_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_25_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_26_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_27_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_28_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_18_2"></td>
+                <td><input type="text" name="t_17_2"></td>
+                <td><input type="text" name="t_16_2"></td>
+                <td><input type="text" name="t_15_2"></td>
+                <td><input type="text" name="t_14_2"></td>
+                <td><input type="text" name="t_13_2"></td>
+                <td><input type="text" name="t_12_2"></td>
+                <td><input type="text" name="t_11_2"></td>
+                <td><input type="text" name="t_21_2"></td>
+                <td><input type="text" name="t_22_2"></td>
+                <td><input type="text" name="t_23_2"></td>
+                <td><input type="text" name="t_24_2"></td>
+                <td><input type="text" name="t_25_2"></td>
+                <td><input type="text" name="t_26_2"></td>
+                <td><input type="text" name="t_27_2"></td>
+                <td><input type="text" name="t_28_2"></td>
             </tr>
             <tr>
-                <td><input type="text" name="t_18_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_17_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_16_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_15_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_14_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_13_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_12_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_11_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_21_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_22_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_23_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_24_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_25_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_26_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_27_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_28_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_18_1"</td>
+                <td><input type="text" name="t_17_1"></td>
+                <td><input type="text" name="t_16_1"></td>
+                <td><input type="text" name="t_15_1"></td>
+                <td><input type="text" name="t_14_1"></td>
+                <td><input type="text" name="t_13_1"></td>
+                <td><input type="text" name="t_12_1"></td>
+                <td><input type="text" name="t_11_1"></td>
+                <td><input type="text" name="t_21_1"></td>
+                <td><input type="text" name="t_22_1"></td>
+                <td><input type="text" name="t_23_1"></td>
+                <td><input type="text" name="t_24_1"></td>
+                <td><input type="text" name="t_25_1"></td>
+                <td><input type="text" name="t_26_1"></td>
+                <td><input type="text" name="t_27_1"></td>
+                <td><input type="text" name="t_28_1"></td>
             </tr>
             <tr>
                 <td>18</td>
@@ -81,41 +81,41 @@
             </tr>
             </tr>
             <tr>
-                <td><input type="text" name="t_48_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_47_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_46_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_45_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_44_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_43_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_42_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_41_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_31_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_32_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_33_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_34_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_35_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_36_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_37_1" class="border-0 p-0"></td>
-                <td><input type="text" name="t_38_1" class="border-0 p-0"></td>
+                <td><input type="text" name="t_48_1"></td>
+                <td><input type="text" name="t_47_1"></td>
+                <td><input type="text" name="t_46_1"></td>
+                <td><input type="text" name="t_45_1"></td>
+                <td><input type="text" name="t_44_1"></td>
+                <td><input type="text" name="t_43_1"></td>
+                <td><input type="text" name="t_42_1"></td>
+                <td><input type="text" name="t_41_1"></td>
+                <td><input type="text" name="t_31_1"></td>
+                <td><input type="text" name="t_32_1"></td>
+                <td><input type="text" name="t_33_1"></td>
+                <td><input type="text" name="t_34_1"></td>
+                <td><input type="text" name="t_35_1"></td>
+                <td><input type="text" name="t_36_1"></td>
+                <td><input type="text" name="t_37_1"></td>
+                <td><input type="text" name="t_38_1"></td>
             </tr>
             </tr>
             <tr>
-                <td><input type="text" name="t_48_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_47_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_46_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_45_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_44_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_43_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_42_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_41_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_31_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_32_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_33_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_34_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_35_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_36_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_37_2" class="border-0 p-0"></td>
-                <td><input type="text" name="t_38_2" class="border-0 p-0"></td>
+                <td><input type="text" name="t_48_2"></td>
+                <td><input type="text" name="t_47_2"></td>
+                <td><input type="text" name="t_46_2"></td>
+                <td><input type="text" name="t_45_2"></td>
+                <td><input type="text" name="t_44_2"></td>
+                <td><input type="text" name="t_43_2"></td>
+                <td><input type="text" name="t_42_2"></td>
+                <td><input type="text" name="t_41_2"></td>
+                <td><input type="text" name="t_31_2"></td>
+                <td><input type="text" name="t_32_2"></td>
+                <td><input type="text" name="t_33_2"></td>
+                <td><input type="text" name="t_34_2"></td>
+                <td><input type="text" name="t_35_2"></td>
+                <td><input type="text" name="t_36_2"></td>
+                <td><input type="text" name="t_37_2"></td>
+                <td><input type="text" name="t_38_2"></td>
             </tr>
         </table>
 

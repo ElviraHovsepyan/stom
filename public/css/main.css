@@ -43,3 +43,8 @@
 .table-cont tr{
     text-align: center;
 }
+.table-cont table input{
+    border: none;
+    padding: 0;
+}
+
