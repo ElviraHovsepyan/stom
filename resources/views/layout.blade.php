@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href={{ asset("bootstrap/css/bootstrap.css") }}>
     <link rel="stylesheet" href={{ asset("jquery/jquery-ui.min.css") }}>
+    <link rel="stylesheet" href={{ asset("bootstrap/css/datatables.min.css") }}>
     <link rel="stylesheet" href={{ asset("css/main.css") }}>
 </head>
 <body>
@@ -41,6 +42,8 @@
 @yield('content')
 <script type="text/javascript" src={{ asset("js/jquery.min.js") }}></script>
 <script type="text/javascript" src={{ asset("jquery/jquery-ui.min.js") }}></script>
+<script type="text/javascript" src={{ asset("bootstrap/js/bootstrap.min.js") }}></script>
+<script type="text/javascript" src={{ asset("bootstrap/js/datatables.min.js") }}></script>
 <script type="text/javascript" src={{ asset("js/script.js") }}></script>
 </body>
 </html>

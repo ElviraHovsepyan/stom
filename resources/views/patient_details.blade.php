@@ -117,7 +117,7 @@
                 <td><input type="text" name="t_38_2" value="{{ $patient['patient_tooth'][31]['value_2'] }}"></td>
             </tr>
         </table>
-        <input type="hidden" name="id" value="{{ $patient->id }}">
+        <input type="hidden" name="id" value="{{ $patient->id }}" id="patient_id">
         <div class="form-group row">
             <div class="col-md-12">
                 <input type="text" name="first_name" class="form-control" placeholder="First Name" autocomplete="off" value="{{ $patient->first_name }}">
@@ -157,7 +157,8 @@
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Reason</th>
+            <th scope="col">Diagnosis</th>
+            <th scope="col">Tooth</th>
             <th scope="col">Procedure</th>
             <th scope="col">Date</th>
             <th scope="col">Price</th>
@@ -168,12 +169,13 @@
         <tbody>
         <tr>
             <th scope="row">Add new</th>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><button>Add</button></td>
+            <td><input type="text" id="diagnosis"></td>
+            <td><input type="text" id="tooth"></td>
+            <td><input type="text" id="procedure"></td>
+            <td><input type="text" id="date"></td>
+            <td><input type="text" id="price"></td>
+            <td><input type="text" id="next_visit"></td>
+            <td><button id="add_visit">Add</button></td>
         </tr>
         <tr>
             <th scope="row">1</th>
@@ -185,8 +187,6 @@
         </tr>
         </tbody>
     </table>
-    <div class="row">
-        <p>Paging</p>
-    </div>
+
 </div>
 @endsection

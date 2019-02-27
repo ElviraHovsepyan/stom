@@ -16,7 +16,8 @@ class CreateVisitsTable extends Migration
         Schema::create('visits', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('patient_id');
-            $table->string('reason')->nullable();
+            $table->string('diagnosis')->nullable();
+            $table->string('tooth')->nullable();
             $table->string('procedure')->nullable();
             $table->string('price')->nullable();
             $table->string('date')->nullable();
