@@ -16,7 +16,8 @@ class PatientsController extends Controller
 
     public function patientsDetails($id){
         $patient = Patient::with('patient_tooth')->where('id',$id)->first();
-        return view('patient_details',['patient'=>$patient]);
+        $visits = Visit::where('patient_id', $id)->orderBy('id','desc')->get();
+        return view('patient_details',['patient'=>$patient,'visits'=>$visits]);
     }
 
     public function addPatient(){

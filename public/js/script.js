@@ -25,6 +25,14 @@ $('#datepicker').datepicker({
 	 dateFormat: "yy-mm-dd"
 });
 
+$('#datepicker1').datepicker({
+    dateFormat: "yy-mm-dd"
+});
+
+$('#datepicker2').datepicker({
+    dateFormat: "yy-mm-dd"
+});
+
 $('#datepicker').on('change', function(){
 	let date = $(this).val();
 	window.location.href='http://stom.loc/notes/'+date;
@@ -59,9 +67,9 @@ $('#add_visit').click(function () {
 	let diagnosis = $('#diagnosis').val();
 	let tooth = $('#tooth').val();
 	let procedure = $('#procedure').val();
-	let date = $('#date').val();
+	let date = $('#datepicker1').val();
 	let price = $('#price').val();
-	let next_visit = $('#next_visit').val();
+	let next_visit = $('#datepicker2').val();
 	$.ajax({
 		url: '/visit',
 		type: 'post',

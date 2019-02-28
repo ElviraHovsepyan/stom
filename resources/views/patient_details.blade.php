@@ -172,19 +172,23 @@
             <td><input type="text" id="diagnosis"></td>
             <td><input type="text" id="tooth"></td>
             <td><input type="text" id="procedure"></td>
-            <td><input type="text" id="date"></td>
+            <td><input type="text" id="datepicker1"></td>
             <td><input type="text" id="price"></td>
-            <td><input type="text" id="next_visit"></td>
+            <td><input type="text" id="datepicker2"></td>
             <td><button id="add_visit">Add</button></td>
         </tr>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-        </tr>
+        @foreach($visits as $i=>$visit)
+            <tr>
+                <th scope="row">{{ count($visits) - $i }}</th>
+                <td>{{ $visit->diagnosis }}</td>
+                <td>{{ $visit->tooth }}</td>
+                <td>{{ $visit->procedure }}</td>
+                <td>{{ $visit->date }}</td>
+                <td>{{ $visit->price }}</td>
+                <td>{{ $visit->next_visit }}</td>
+                <td>delete</td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
 
