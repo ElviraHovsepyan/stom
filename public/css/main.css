@@ -47,4 +47,10 @@
     border: none;
     padding: 0;
 }
+.rules-row p{
+    padding-left: 10px;
+}
+.rules-row{
+    margin-bottom: 20px;
+}
 

@@ -118,6 +118,26 @@
                 <td><input type="text" name="t_38_2"></td>
             </tr>
         </table>
+        <div class="row rules-row mb-5 mt-5">
+            <div class="col-md-4">
+                <p>Բացակայող ատամ - O</p>
+                <p>Ոչ ատամնափուտ. ախտ. - &#916;</p>
+                <p>Ատամնափուտ - C</p>
+                <p>Կակղանաբորբ - P</p>
+            </div>
+            <div class="col-md-4">
+                <p>Շուրջատամնաբորբ - Pt</p>
+                <p>Արմատ - R</p>
+                <p>Իմպլանտ - I</p>
+                <p>Ատամնալիցք - F</p>
+            </div>
+            <div class="col-md-4">
+                <p>Ատամնափառ - DP</p>
+                <p>Ատամնաքար - DC</p>
+                <p>Արհեստական պսակ - Cr</p>
+                <p>Ատամների շարժունություն՝ - I, II, III</p>
+            </div>
+        </div>
 
         <div class="form-group row">
             <div class="col-md-12">

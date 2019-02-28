@@ -152,7 +152,7 @@
 </div>
 
 <h3 class="text-center main-h1 mb-5 mt-5">Items list</h3>
-<div class="container">
+<div class="container mb-5">
     <table class="table table-hover table-striped">
         <thead>
         <tr>
