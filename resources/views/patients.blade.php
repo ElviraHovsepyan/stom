@@ -1,16 +1,16 @@
 @extends('layout')
 @section('content')
-    <h1 class="text-center main-h1 mb-5 mt-5" >Items list</h1>
     <div class="container">
-        <table class="table table-hover table-striped" id="example">
+    <h1 class="main-h1 mb-5 mt-5" >Հիվանդներ</h1>
+        <table class="table table-striped" id="example">
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">First_name</th>
-                <th scope="col">Last_name</th>
-                <th scope="col">Telephone</th>
-                <th scope="col">View</th>
-                <th scope="col">Delete</th>
+                <th scope="col">Անուն</th>
+                <th scope="col">Ազգանուն</th>
+                <th scope="col">Հեռախոսահամար</th>
+                <th scope="col">Մանրամասները</th>
+                <th scope="col">Ջնջել</th>
             </tr>
             </thead>
             <tbody>
@@ -20,8 +20,8 @@
                     <td>{{ $patient->first_name }}</td>
                     <td>{{ $patient->last_name }}</td>
                     <td>{{ $patient->telephone }}</td>
-                    <td><a href="{{ route('patient_details',$patient->id) }}">View</a></td>
-                    <td><button type="button" data-toggle="modal" data-target="#myModal" class="delete-button" data-id="{{ $patient->id }}" data-name="{{ $patient->first_name.' '.$patient->last_name }}">Delete</button></td>
+                    <td><a href="{{ route('patient_details',$patient->id) }}" class="view-button">Դիտել</a></td>
+                    <td><button type="button" data-toggle="modal" data-target="#myModal" class="btn delete-button" data-id="{{ $patient->id }}" data-name="{{ $patient->first_name.' '.$patient->last_name }}">Ջնջել</button></td>
                 </tr>
             @endforeach
             </tbody>
@@ -37,13 +37,13 @@
                 </div>
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <p>Delete patient <span id="name-span"></span> ?</p>
+                    <p>Ջնջել <span id="name-span"></span>  հիվանդի տվյալները?</p>
                 </div>
                 <input type="hidden" id="id-input">
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" id="delete-patient">Yes</button>
-                    <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+                    <button class="btn modal-button" id="delete-patient">Այո</button>
+                    <button class="btn modal-button" data-dismiss="modal"> Ոչ </button>
                 </div>
             </div>
         </div>

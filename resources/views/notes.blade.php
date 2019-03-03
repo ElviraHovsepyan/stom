@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
   <div class="container">
-            <h1 class="mt-4 mb-5 date-h1">{{ $date }}</h1>
+            <h1 class="mt-4 mb-5 date-h1 text-center"><img src="{{ asset("pics/left.png") }}" id="day_before">{{ $date }}<img src="{{ asset("pics/right.png") }}" id="day_after"></h1>
             <div class="form-group text-right">
                 <label for="datepicker"><img src={{ asset("pics/calendar-icon.png") }} class="icon-date"></label>
                <p><input type="text" id="datepicker" class="date-input"></p>

@@ -8,8 +8,17 @@ use App\Note;
 
 class NotesController extends Controller
 {
-    public function index($date = false){
-    	if(!$date){
+    public function index($date = false, $param = false){
+        if($param){
+            if($param == 'day_before'){
+                $choosed_date = Carbon::parse($date)->subDays(1)->toDateString();
+                $t = Carbon::parse($choosed_date)->format('d F l Y');
+            } else {
+                $choosed_date = Carbon::parse($date)->addDay()->toDateString();
+                $t = Carbon::parse($choosed_date)->format('d F l Y');
+            }
+        }
+    	else if(!$date){
 			$choosed_date = Carbon::now()->toDateString();
 			$t = Carbon::now()->format('d F l Y');
     	} else {
@@ -27,11 +36,11 @@ class NotesController extends Controller
     }
 
     public function store(Request $request){
-    	$date = $request->date;
-    	$date = Carbon::parse($date)->toDateString();
-    	$note = Note::where('date',$date)->first();
-    	$row = $request->name;
-    	$note->$row = $request->text;
+        $date = $request->date;
+        $date = Carbon::parse($date)->toDateString();
+        $note = Note::where('date',$date)->first();
+        $row = $request->name;
+        $note->$row = $request->text;
     	$note->save();
     	return 'success';
     }

@@ -38,6 +38,17 @@ $('#datepicker').on('change', function(){
 	window.location.href='http://stom.loc/notes/'+date;
 });
 
+$('#day_before').click(function(){
+	let date = $('.date-h1').text();
+	let param = 'day_before';
+    window.location.href='http://stom.loc/notes/'+date+'/'+param;
+});
+$('#day_after').click(function(){
+    let date = $('.date-h1').text();
+    let param = 'day_after';
+    window.location.href='http://stom.loc/notes/'+date+'/'+param;
+});
+
 $('.delete-button').click(function(){
 	let text = $(this).data('id');
 	let name = $(this).data('name');
@@ -78,3 +89,17 @@ $('#add_visit').click(function () {
 		if(response === 'success') window.location.reload();
     });
 });
+
+$('.one-visit-tr input').blur(function () {
+	let id = $(this).parent().siblings('th').data('id');
+	let val = $(this).val();
+	let name = $(this).attr('name');
+    $.ajax({
+		url: '/edit_visit',
+		type: 'post',
+		data: {id:id, name:name, val:val}
+    }).done(function (response) {
+		console.log(response);
+    });
+});
+

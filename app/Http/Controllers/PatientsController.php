@@ -102,4 +102,20 @@ class PatientsController extends Controller
         $obj->save();
         return 'success';
     }
+
+    public function deleteVisit($id){
+        $visit = Visit::find($id);
+        $visit->delete();
+        return back();
+    }
+
+    public function editVisit(Request $request){
+        $id = $request->id;
+        $name = $request->name;
+        $val = $request->val;
+        $visit = Visit::find($id);
+        $visit->$name = $val;
+        $visit->save();
+        return 'success';
+    }
 }

@@ -1,10 +1,11 @@
 @extends('layout')
 @section('content')
-<h2 class="mb-5 mt-5 text-center">Add New Item</h2>
 
 <div class="container table-cont">
-        <form autocomplete="off" method="post" action="{{ route('store_patient') }}">
+    <h2 class="mb-5 mt-5">Ավելացնել նոր քարտ</h2>
+    <form autocomplete="off" method="post" action="{{ route('store_patient') }}">
             {{ csrf_field() }}
+        <div class="tooth-div">
         <table class="table table-bordered">
             <tr>
                 <td><input type="text" name="t_18_2"></td>
@@ -42,7 +43,7 @@
                 <td><input type="text" name="t_27_1"></td>
                 <td><input type="text" name="t_28_1"></td>
             </tr>
-            <tr>
+            <tr class="center-numbers">
                 <td>18</td>
                 <td>17</td>
                 <td>16</td>
@@ -60,8 +61,7 @@
                 <td>27</td>
                 <td>28</td>
             </tr>
-            </tr>
-            <tr>
+            <tr class="center-numbers">
                 <td>48</td>
                 <td>47</td>
                 <td>46</td>
@@ -78,7 +78,6 @@
                 <td>36</td>
                 <td>37</td>
                 <td>38</td>
-            </tr>
             </tr>
             <tr>
                 <td><input type="text" name="t_48_1"></td>
@@ -118,7 +117,9 @@
                 <td><input type="text" name="t_38_2"></td>
             </tr>
         </table>
-        <div class="row rules-row mb-5 mt-5">
+    </div>
+
+    <div class="row rules-row mb-4 mt-4">
             <div class="col-md-4">
                 <p>Բացակայող ատամ - O</p>
                 <p>Ոչ ատամնափուտ. ախտ. - &#916;</p>
@@ -138,35 +139,34 @@
                 <p>Ատամների շարժունություն՝ - I, II, III</p>
             </div>
         </div>
-
         <div class="form-group row">
             <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="First Name" autocomplete="off" name="first_name">
+                <input type="text" class="form-control" placeholder="Անուն" autocomplete="off" name="first_name">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Last Name" autocomplete="off" name="last_name">
+                <input type="text" class="form-control" placeholder="Ազգանուն" autocomplete="off" name="last_name">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Address" autocomplete="off" name="address">
+                <input type="text" class="form-control" placeholder="Հասցե" autocomplete="off" name="address">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Telephone" autocomplete="off" name="telephone">
+                <input type="text" class="form-control" placeholder="Հեռախոսահամար" autocomplete="off" name="telephone">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Birth Date" autocomplete="off" name="birth_date">
+                <input type="text" class="form-control" placeholder="Ծննդյան ամսաթիվը" autocomplete="off" name="birth_date">
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-outline-success edit-button">Add</button>
+                <button type="submit" class="btn edit-button">Ավելացնել</button>
             </div>
         </div>
     </form>

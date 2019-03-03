@@ -1,10 +1,12 @@
 @extends('layout')
 @section('content')
 <div class="container table-cont">
-    <h2 class="mb-5 mt-5 text-center">Details</h2>
+    <h2 class="mb-5 mt-5">Ստոմատոլոգիական քարտ</h2>
+
         <form autocomplete="off" method="post" action="{{ route('edit_patient') }}">
             {{ csrf_field() }}
-        <table class="table table-bordered">
+        <div class="tooth-div">
+        <table class="table">
             <tr>
                 <td><input type="text" name="t_18_2" value="{{ $patient['patient_tooth'][0]['value_2'] }}"></td>
                 <td><input type="text" name="t_17_2" value="{{ $patient['patient_tooth'][1]['value_2'] }}"></td>
@@ -41,7 +43,7 @@
                 <td><input type="text" name="t_27_1" value="{{ $patient['patient_tooth'][14]['value_1'] }}"></td>
                 <td><input type="text" name="t_28_1" value="{{ $patient['patient_tooth'][15]['value_1'] }}"></td>
             </tr>
-            <tr>
+            <tr class="center-numbers">
                 <td>18</td>
                 <td>17</td>
                 <td>16</td>
@@ -59,8 +61,7 @@
                 <td>27</td>
                 <td>28</td>
             </tr>
-            </tr>
-            <tr>
+            <tr class="center-numbers">
                 <td>48</td>
                 <td>47</td>
                 <td>46</td>
@@ -77,7 +78,6 @@
                 <td>36</td>
                 <td>37</td>
                 <td>38</td>
-            </tr>
             </tr>
             <tr>
                 <td><input type="text" name="t_48_1" value="{{ $patient['patient_tooth'][16]['value_1'] }}"></td>
@@ -117,6 +117,27 @@
                 <td><input type="text" name="t_38_2" value="{{ $patient['patient_tooth'][31]['value_2'] }}"></td>
             </tr>
         </table>
+        </div>
+        <div class="row rules-row mb-4 mt-4">
+            <div class="col-md-4">
+                <p>Բացակայող ատամ - O</p>
+                <p>Ոչ ատամնափուտ. ախտ. - &#916;</p>
+                <p>Ատամնափուտ - C</p>
+                <p>Կակղանաբորբ - P</p>
+            </div>
+            <div class="col-md-4">
+                <p>Շուրջատամնաբորբ - Pt</p>
+                <p>Արմատ - R</p>
+                <p>Իմպլանտ - I</p>
+                <p>Ատամնալիցք - F</p>
+            </div>
+            <div class="col-md-4">
+                <p>Ատամնափառ - DP</p>
+                <p>Ատամնաքար - DC</p>
+                <p>Արհեստական պսակ - Cr</p>
+                <p>Ատամների շարժունություն՝ - I, II, III</p>
+            </div>
+        </div>
         <input type="hidden" name="id" value="{{ $patient->id }}" id="patient_id">
         <div class="form-group row">
             <div class="col-md-12">
@@ -145,48 +166,48 @@
         </div>
         <div class="form-group row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-outline-success edit-button">Edit</button>
+                <button type="submit" class="btn edit-button">Փոփոխել</button>
             </div>
         </div>
     </form>
 </div>
 
-<h3 class="text-center main-h1 mb-5 mt-5">Items list</h3>
 <div class="container mb-5">
-    <table class="table table-hover table-striped">
+    <h3 class="main-h1 mb-5 mt-5">Այցելություններ</h3>
+    <table class="table visits-table">
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Diagnosis</th>
-            <th scope="col">Tooth</th>
-            <th scope="col">Procedure</th>
-            <th scope="col">Date</th>
-            <th scope="col">Price</th>
-            <th scope="col">Next Visit</th>
-            <th scope="col">Add</th>
+            <th scope="col">Ախտորոշումը</th>
+            <th scope="col">Ատամը</th>
+            <th scope="col">Գործողությունը</th>
+            <th scope="col">Ամսաթիվը</th>
+            <th scope="col">Արժեքը</th>
+            <th scope="col">Հաջորդ այցը</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <th scope="row">Add new</th>
+            <th scope="row">Նոր այց</th>
             <td><input type="text" id="diagnosis"></td>
             <td><input type="text" id="tooth"></td>
             <td><input type="text" id="procedure"></td>
             <td><input type="text" id="datepicker1"></td>
             <td><input type="text" id="price"></td>
             <td><input type="text" id="datepicker2"></td>
-            <td><button id="add_visit">Add</button></td>
+            <td><button class="btn visit-button" id="add_visit">Ավելացնել</button></td>
         </tr>
         @foreach($visits as $i=>$visit)
-            <tr>
-                <th scope="row">{{ count($visits) - $i }}</th>
-                <td>{{ $visit->diagnosis }}</td>
-                <td>{{ $visit->tooth }}</td>
-                <td>{{ $visit->procedure }}</td>
-                <td>{{ $visit->date }}</td>
-                <td>{{ $visit->price }}</td>
-                <td>{{ $visit->next_visit }}</td>
-                <td>delete</td>
+            <tr class="one-visit-tr">
+                <th scope="row" data-id="{{ $visit->id }}">{{ count($visits) - $i }}</th>
+                <td><input type="text" name="diagnosis" value="{{ $visit->diagnosis }}"></td>
+                <td><input type="text" name="tooth" value="{{ $visit->tooth }}"></td>
+                <td><input type="text" name="procedure" value="{{ $visit->procedure }}"></td>
+                <td><input type="text" name="date" value="{{ $visit->date }}"></td>
+                <td><input type="text" name="price" value="{{ $visit->price }}"></td>
+                <td><input type="text" name="next_visit" value="{{ $visit->next_visit }}"></td>
+                <td><a href="{{ route('delete_visit',['id'=>$visit->id]) }}" class="delete-visit">Ջնջել</a></td>
             </tr>
         @endforeach
         </tbody>
