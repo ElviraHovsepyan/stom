@@ -85,6 +85,7 @@ class PatientsController extends Controller
         $id = $request->id;
         $patient = Patient::find($id);
         $patient->patient_tooth()->delete();
+        $patient->visits()->delete();
         $patient->delete();
         return 'success';
     }

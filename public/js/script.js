@@ -69,9 +69,11 @@ $('#delete-patient').click(function(){
 
 $(document).ready(function() {
     $('#example').DataTable({
-        "lengthMenu": [[5,10, 25, 50, -1], [5,10, 25, 50, "All"]]
+        "lengthMenu": [[20, 50, -1], [20, 50, "All"]]
 	});
-} );
+    $('#example_filter input').addClass('form-control');
+    $('#example_filter label').html($('#example_filter label').html().replace('Search:', 'man gal'));
+});
 
 $('#add_visit').click(function () {
 	let id = $('#patient_id').val();
@@ -102,4 +104,5 @@ $('.one-visit-tr input').blur(function () {
 		console.log(response);
     });
 });
+
 
