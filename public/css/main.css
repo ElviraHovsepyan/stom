@@ -6,7 +6,6 @@ body{
     background-image: url("../pics/fon.jpg");
     background-size: cover;
     background-position: right top;
-    /*background-repeat: no-repeat;*/
 }
 input{
     outline: none;
@@ -17,16 +16,34 @@ input{
 }
 .menu-bar a{
     color:#118492;
+    font-size: 22px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
 }
+.menu-bar a:hover {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    -webkit-animation: shine 2s infinite;
+    animation: shine 2s infinite;
+    outline-width: 0;
+}
+
+@-webkit-keyframes shine {
+    from {
+        -webkit-mask-position: 150%;
+    }
+
+    to {
+        -webkit-mask-position: -50%;
+    }
+}
+
 .menu-bar li{
     margin-left: 0;
     margin-right: 20px;
 }
-
-/*.menu-bar a:hover{*/
-    /*color: white;*/
-/*}*/
-
 h1, h2, h3{
     text-align: left;
     font-weight: normal;
@@ -36,6 +53,10 @@ h1, h2, h3{
     margin: 0px 30px;
     cursor: pointer;
     width: 20px;
+}
+.date-h1 img:hover{
+    opacity: 0.5;
+    transition: 0.4s;
 }
 .tooth-div{
     width: 100%;
@@ -50,11 +71,9 @@ h1, h2, h3{
     width: 92%;
     margin-left: 4.5%;
     margin-bottom: 0;
-    /*border: 1px solid #0fdcfb!important;*/
 }
 .tooth-div table td{
     border: 1px solid #98f7fd;
-    /*border-color: #0fdcfb;*/
 }
 .tooth-div table input{
     background: transparent;
@@ -79,7 +98,8 @@ h1, h2, h3{
 .edit-button:hover{
     background: #f6fefe;
     color: #118492;
-
+    border: 1px solid #118492;
+    transition: 0.5s;
 }
 .table-cont td input{
     display: block;
@@ -99,6 +119,10 @@ h1, h2, h3{
     float: right;
     cursor: pointer;
 }
+.icon-date:hover{
+    opacity: 0.4;
+    transition: 0.5s;
+}
 .date-input{
     width:0;
     height: 0;
@@ -109,10 +133,8 @@ h1, h2, h3{
 }
 
 .ui-datepicker-today a.ui-state-highlight{
-    /*border-color: #77ebfd;*/
     color: white;
     background: #0fdcfb;
-    /*background: white;*/
 }
 .ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span{
    border: #0fdcfb;
@@ -197,6 +219,8 @@ h1, h2, h3{
 .visit-button:hover{
     background: #f6fefe;
     color: #118492;
+    border: 1px solid #118492;
+    transition: 0.5s;
 }
 .delete-visit{
     color:#118492;
@@ -254,7 +278,7 @@ h1, h2, h3{
     color: #118492;
 }
 #example td, #example th{
-    text-align: center;
+    text-align: right;
 }
 
 .table-striped tr{
@@ -269,6 +293,9 @@ h1, h2, h3{
 #example.table th{
     border-bottom: none!important;
 }
+#example_filter label{
+    color: #118492;
+}
 table.dataTable.no-footer{
     border-bottom: none!important;
 }
@@ -276,13 +303,15 @@ table.dataTable{
     border-top: none!important;
 }
 .delete-button{
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #118492;
     color: white;
 }
 .delete-button:hover{
     background-color: white;
     color: #118492;
+    border: 1px solid #118492;
+    transition: 0.5s;
 }
 .dataTables_wrapper .dataTables_filter input{
 
@@ -296,9 +325,10 @@ table.dataTable{
     border-radius: 30px;
     color: white;
     width: 70px;
-    /*height: 0px;*/
 }
 .modal-button:hover{
-    background: #d6fefe;
+    background: white;
     color: #118492;
+    transition: 0.5s;
+    border: 1px solid #118492;
 }

@@ -69,10 +69,14 @@ $('#delete-patient').click(function(){
 
 $(document).ready(function() {
     $('#example').DataTable({
-        "lengthMenu": [[20, 50, -1], [20, 50, "All"]]
+        "lengthMenu": [[25, 50, -1], [25, 50, "All"]],
+        "order": [[ 0, "desc" ]],
+        columnDefs: [
+            { targets: 'no-sort', orderable: false }
+        ]
 	});
     $('#example_filter input').addClass('form-control');
-    $('#example_filter label').html($('#example_filter label').html().replace('Search:', 'man gal'));
+    // $('#example_filter label').html($('#example_filter label').html().replace('Search:', 'Որոնել'));
 });
 
 $('#add_visit').click(function () {
@@ -103,6 +107,12 @@ $('.one-visit-tr input').blur(function () {
     }).done(function (response) {
 		console.log(response);
     });
+});
+
+$('.delete-visit').click(function () {
+	let id = $(this).data('id');
+	console.log(id);
+	$('#delete-visit-a').attr('href','/delete_visit/'+id);
 });
 
 

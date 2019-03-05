@@ -2,7 +2,6 @@
 @section('content')
 <div class="container table-cont">
     <h2 class="mb-5 mt-5">Ստոմատոլոգիական քարտ</h2>
-
         <form autocomplete="off" method="post" action="{{ route('edit_patient') }}">
             {{ csrf_field() }}
         <div class="tooth-div">
@@ -207,11 +206,27 @@
                 <td><input type="text" name="date" value="{{ $visit->date }}"></td>
                 <td><input type="text" name="price" value="{{ $visit->price }}"></td>
                 <td><input type="text" name="next_visit" value="{{ $visit->next_visit }}"></td>
-                <td><a href="{{ route('delete_visit',['id'=>$visit->id]) }}" class="delete-visit">Ջնջել</a></td>
+                <td><button data-toggle="modal" data-target="#delete-visit" class="btn delete-visit delete-button" data-id="{{ $visit->id }}">Ջնջել</button></td>
             </tr>
         @endforeach
         </tbody>
     </table>
-
+</div>
+<div class="modal fade" id="delete-visit">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Ջնջել այցելությունը?</p>
+            </div>
+            <input type="hidden" id="id-input">
+            <div class="modal-footer">
+                <a href="" id="delete-visit-a"><button class="btn modal-button">Այո</button></a>
+                <button class="btn modal-button" data-dismiss="modal"> Ոչ </button>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

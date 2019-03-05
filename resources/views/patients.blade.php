@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
     <div class="container">
-    <h1 class="main-h1 mb-5 mt-5" >Հիվանդներ</h1>
+    <h1 class="main-h1 mt-5" >Հիվանդներ</h1>
         <table class="table table-striped" id="example">
             <thead>
             <tr>
@@ -9,8 +9,8 @@
                 <th scope="col">Անուն</th>
                 <th scope="col">Ազգանուն</th>
                 <th scope="col">Հեռախոսահամար</th>
-                <th scope="col">Մանրամասները</th>
-                <th scope="col">Ջնջել</th>
+                <th class="no-sort" scope="col">Մանրամասները</th>
+                <th class="no-sort" scope="col">Ջնջել</th>
             </tr>
             </thead>
             <tbody>
@@ -30,17 +30,13 @@
     <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
-                <!-- Modal Header -->
                 <div class="modal-header">
-                    {{--<h4 class="modal-title">Modal Heading</h4>--}}
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <!-- Modal body -->
                 <div class="modal-body">
                     <p>Ջնջել <span id="name-span"></span>  հիվանդի տվյալները?</p>
                 </div>
                 <input type="hidden" id="id-input">
-                <!-- Modal footer -->
                 <div class="modal-footer">
                     <button class="btn modal-button" id="delete-patient">Այո</button>
                     <button class="btn modal-button" data-dismiss="modal"> Ոչ </button>
