@@ -29,9 +29,9 @@ $('#datepicker1').datepicker({
     dateFormat: "yy-mm-dd"
 });
 
-$('#datepicker2').datepicker({
-    dateFormat: "yy-mm-dd"
-});
+// $('#datepicker2').datepicker({
+//     dateFormat: "yy-mm-dd"
+// });
 
 $('#datepicker').on('change', function(){
 	let date = $(this).val();
@@ -82,15 +82,16 @@ $(document).ready(function() {
 $('#add_visit').click(function () {
 	let id = $('#patient_id').val();
 	let diagnosis = $('#diagnosis').val();
+	let proc_type = $('#proc_type').val();
 	let tooth = $('#tooth').val();
 	let procedure = $('#procedure').val();
 	let date = $('#datepicker1').val();
 	let price = $('#price').val();
-	let next_visit = $('#datepicker2').val();
+	let payed = $('#payed').val();
 	$.ajax({
 		url: '/visit',
 		type: 'post',
-		data: {id:id, diagnosis:diagnosis,tooth:tooth,procedure:procedure,date:date,price:price,next_visit:next_visit}
+		data: {id:id, diagnosis:diagnosis,proc_type:proc_type,tooth:tooth,procedure:procedure,date:date,price:price,payed:payed}
 	}).done(function (response) {
 		if(response === 'success') window.location.reload();
     });
@@ -113,6 +114,24 @@ $('.delete-visit').click(function () {
 	let id = $(this).data('id');
 	console.log(id);
 	$('#delete-visit-a').attr('href','/delete_visit/'+id);
+});
+
+function changeFont(val) {
+	if(val === 'up'){
+		$('.tooth-up').addClass('display-none');
+		$('.tooth-down').removeClass('display-none');
+		$('#tooth').addClass('changeFont');
+	} else {
+        $('.tooth-down').addClass('display-none');
+        $('.tooth-up').removeClass('display-none');
+        $('#tooth').removeClass('changeFont');
+    }
+}
+
+$('#type').change(function(){
+	let proc_type = $('#type').val();
+	let id = $('#patient_id').val();
+	window.location.href = '/visits/'+id+'/'+proc_type;
 });
 
 

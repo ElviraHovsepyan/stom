@@ -9,6 +9,7 @@
                 <th scope="col">Անուն</th>
                 <th scope="col">Ազգանուն</th>
                 <th scope="col">Հեռախոսահամար</th>
+                <th class="no-sort" scope="col">Այցեր</th>
                 <th class="no-sort" scope="col">Մանրամասները</th>
                 <th class="no-sort" scope="col">Ջնջել</th>
             </tr>
@@ -20,6 +21,7 @@
                     <td>{{ $patient->first_name }}</td>
                     <td>{{ $patient->last_name }}</td>
                     <td>{{ $patient->telephone }}</td>
+                    <td><a href="{{ route('patient_visits',$patient->id) }}" class="view-button">Դիտել</a></td>
                     <td><a href="{{ route('patient_details',$patient->id) }}" class="view-button">Դիտել</a></td>
                     <td><button type="button" data-toggle="modal" data-target="#myModal" class="btn delete-button" data-id="{{ $patient->id }}" data-name="{{ $patient->first_name.' '.$patient->last_name }}">Ջնջել</button></td>
                 </tr>

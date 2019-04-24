@@ -16,8 +16,7 @@ class PatientsController extends Controller
 
     public function patientsDetails($id){
         $patient = Patient::with('patient_tooth')->where('id',$id)->first();
-        $visits = Visit::where('patient_id', $id)->orderBy('id','desc')->get();
-        return view('patient_details',['patient'=>$patient,'visits'=>$visits]);
+        return view('patient_details',['patient'=>$patient]);
     }
 
     public function addPatient(){
@@ -95,11 +94,12 @@ class PatientsController extends Controller
         $obj = new Visit();
         $obj->patient_id = $id;
         if($request->diagnosis) $obj->diagnosis = $request->diagnosis;
+        if($request->proc_type) $obj->type = $request->proc_type;
         if($request->tooth) $obj->tooth = $request->tooth;
         if($request->procedure) $obj->procedure = $request->procedure;
         if($request->date) $obj->date = $request->date;
         if($request->price) $obj->price = $request->price;
-        if($request->next_visit) $obj->next_visit = $request->next_visit;
+        if($request->payed) $obj->payed = $request->payed;
         $obj->save();
         return 'success';
     }
@@ -118,5 +118,15 @@ class PatientsController extends Controller
         $visit->$name = $val;
         $visit->save();
         return 'success';
+    }
+
+    public function patientsVisits($id, $type = false){
+        $patient = Patient::find($id);
+        if($type && $type != 'All'){
+            $visits = Visit::where([['patient_id', $id],['type',$type]])->orderBy('id','desc')->get();
+        } else {
+            $visits = Visit::where('patient_id', $id)->orderBy('id','desc')->get();
+        }
+        return view('patient_visits',['visits'=>$visits,'patient'=>$patient,'type'=>$type]);
     }
 }

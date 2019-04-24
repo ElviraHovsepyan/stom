@@ -199,16 +199,27 @@ h1, h2, h3{
 .visits-table tr:first-child td{
     border-bottom: none!important;
 }
-.visits-table tr:first-child input{
+.visits-table tr:first-child input, .visits-table select{
     border: 1px solid #b3c6c6;
     border-radius: 30px;
     background: white;
     width: 140px;
     height: 38px;
     padding-left: 10px;
+    outline: none;
 }
 .visits-table th{
     border-top: none!important;
+}
+
+#type{
+    border: 1px solid #b3c6c6;
+    border-radius: 30px;
+    background: white;
+    min-width: 180px;
+    height: 38px;
+    padding-left: 10px;
+    outline: none;
 }
 
 .visit-button{
@@ -331,4 +342,24 @@ table.dataTable{
     color: #118492;
     transition: 0.5s;
     border: 1px solid #118492;
+}
+.tooth-up, .tooth-down{
+    position: relative;
+    top: -38px;
+    right: -78px;
+    cursor: pointer;
+}
+/*.tooth-down{*/
+    /*position: relative;*/
+    /*top: -38px;*/
+    /*right: -140px;*/
+    /*cursor: pointer;*/
+/*}*/
+.display-none{
+    display: none;
+}
+
+.changeFont{
+    font-size: 10px;
+    vertical-align: super;
 }
