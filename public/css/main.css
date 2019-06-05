@@ -172,8 +172,8 @@ h1, h2, h3{
     border-bottom: 4px solid white !important;
 }
 .visits-table td{
-    /*padding: 5px;*/
-    width: 140px;
+    padding: 5px;
+    width: 120px;
     text-align: center;
     vertical-align: center;
 }
@@ -345,7 +345,7 @@ table.dataTable{
 }
 .tooth-up, .tooth-down{
     position: relative;
-    top: -38px;
+    top: -10px;
     right: -78px;
     cursor: pointer;
 }
@@ -362,4 +362,19 @@ table.dataTable{
 .changeFont{
     font-size: 10px;
     vertical-align: super;
+}
+
+.switcher-source{
+    border: 1px solid #b3c6c6;
+    border-radius: 30px;
+    background: white;
+    width: 140px;
+    height: 38px;
+    padding-left: 10px;
+    outline: none;
+    margin-top: -24px;
+    text-align: left;
+}
+.container{
+    margin-left: 16px!important;
 }

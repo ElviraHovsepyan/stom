@@ -34,7 +34,15 @@
                     <option value="Օրթոպեդիա">Օրթոպեդիա</option>
                 </select>
             </td>
-            <td><input type="text" id="tooth"><img src="{{ asset("pics/up.png") }}" class="tooth-up" onclick="changeFont('up')"><img src="{{ asset("pics/down.png") }}" class="tooth-down display-none" onclick="changeFont('down')"></td>
+            <td>
+                <div>
+                    {{--<button class="switcher">Switch</button>--}}
+                    <img src="{{ asset("pics/up.png") }}" class="tooth-up switcher" onclick="changeFont('up')">
+                    <img src="{{ asset("pics/down.png") }}" class="tooth-down display-none switcher" onclick="changeFont('down')">
+                    <div contenteditable="true" id="source" class="switcher-source" data-normal="" data-sub=""></div>
+                </div>
+                {{--<input type="text" id="tooth">--}}
+            </td>
             <td><input type="text" id="procedure"></td>
             <td><input type="text" id="datepicker1"></td>
             <td><input type="text" id="price"></td>
@@ -46,7 +54,7 @@
                 <th scope="row" data-id="{{ $visit->id }}">{{ count($visits) - $i }}</th>
                 <td><input type="text" name="diagnosis" value="{{ $visit->diagnosis }}"></td>
                 <td><span>{{ $visit->type }}</span></td>
-                <td><input type="text" name="tooth" value="{{ $visit->tooth }}"></td>
+                <td>{!!  $visit->tooth !!}</td>
                 <td><input type="text" name="procedure" value="{{ $visit->procedure }}"></td>
                 <td><input type="text" name="date" value="{{ $visit->date }}"></td>
                 <td><input type="text" name="price" value="{{ $visit->price }}"></td>

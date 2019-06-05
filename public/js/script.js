@@ -83,7 +83,7 @@ $('#add_visit').click(function () {
 	let id = $('#patient_id').val();
 	let diagnosis = $('#diagnosis').val();
 	let proc_type = $('#proc_type').val();
-	let tooth = $('#tooth').val();
+	let tooth = $('#source').html();
 	let procedure = $('#procedure').val();
 	let date = $('#datepicker1').val();
 	let price = $('#price').val();
@@ -117,6 +117,7 @@ $('.delete-visit').click(function () {
 });
 
 function changeFont(val) {
+console.log(val);
 	if(val === 'up'){
 		$('.tooth-up').addClass('display-none');
 		$('.tooth-down').removeClass('display-none');
